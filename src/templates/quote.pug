@@ -1,0 +1,15 @@
+.quote.quote--red
+  .quote__bookmark
+  .quote__header
+    ul.quote__genre-list
+      each genre in genres
+        li.quote__genre=genre.genre
+    p.quote__autor=source.author
+  a(href="").quote__body
+    p.quote__source=source.source
+    p.quote__text=quote.quote
+  .quote__footer
+    //- ul.quote__tags-list
+    //-   each tag in tags
+    //-     li.quote__tag
+    //-       a(data-tag-value=tag.tag, href='').quote__tag-link= '#' + tag.tag

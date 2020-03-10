@@ -1,0 +1,8 @@
+.quotes-list {
+  @include no-list();
+}
+
+.quotes-list__item {
+  display: flex;
+  margin-bottom: map-get($indent, md);
+}

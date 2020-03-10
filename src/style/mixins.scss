@@ -1,0 +1,26 @@
+@mixin no-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin media($value) {
+  @media(min-width: map-get($grid-breakpoints, $value)) {
+    @content;
+  }
+}
+
+@mixin quoteColor($color) {
+  .quote__body {
+    border-color: $color;
+  }
+}
+
+@mixin getQuoteColor($colors) {
+  @each $key, $color in $colors {
+    .quote--#{$key} {
+      @include quoteColor($color);
+    }
+    
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "stylelint-config-airbnb",
+    "stylelint-order-htmlacademy",
+  ],
+  "plugins": [
+    "stylelint-scss",
+     "stylelint-order"
+  ],
+  
+}

@@ -1,0 +1,39 @@
+$gutter: 15px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+@mixin make-container-max-width {
+
+  @each $key, $value in $grid-breakpoints {
+    @media(min-width: $value) {
+      max-width: #{map-get($container-max-widths, $key)};
+    }
+  }
+}
+
+@mixin make-container {
+  width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+}
+
+.container {
+  @include make-container();
+  @include make-container-max-width();
+}

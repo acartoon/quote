@@ -1,0 +1,13 @@
+- var menu = ["Авторы", "Жанры", "Теги", "Цвета"];
+include header/main-nav__list.pug
+
+.page-header
+  nav.main-nav
+    .container
+      .main-nav__inner
+        p.main-nav__slogan toninsecret.ru
+        include search.pug
+        button.main-nav__trigger
+          span
+        .main-nav__dropdown
+          +navList(menu)

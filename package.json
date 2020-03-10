@@ -1,0 +1,53 @@
+{
+  "name": "quote",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --watch",
+    "start": "webpack-dev-server",
+    "pug": "node src/js/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "apply-loader": "2.0.0",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "4.0.0-beta.11",
+    "node-sass": "4.13.0",
+    "normalize.css": "8.0.1",
+    "owl.carousel": "^2.3.4",
+    "pug": "^2.0.4",
+    "pug-html-loader": "1.1.5",
+    "pug-loader": "https://github.com/pugjs/pug-loader/tarball/master",
+    "sass": "1.25.1-test.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "1.0.0",
+    "stylelint": "13.0.0",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "4.0.0",
+    "stylelint-scss": "3.13.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.0",
+    "bootstrap-4-grid": "^3.2.0",
+    "deep-equal": "^2.0.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-pug-plugin": "^2.0.0",
+    "jquery": "^3.4.1",
+    "postcss-loader": "^3.0.0",
+    "pug-require": "^2.0.2",
+    "slick-carousel": "^1.8.1",
+    "stylelint-order-htmlacademy": "^1.0.1",
+    "tiny-slider": "^2.9.2"
+  },
+  "description": ""
+}

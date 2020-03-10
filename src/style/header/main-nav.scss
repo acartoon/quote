@@ -1,0 +1,53 @@
+@import "main-nav__list";
+
+@import "main-nav__trigger";
+
+.main-nav {
+  position: relative;
+  margin-bottom: map-get($indent, sm);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: map-get($colors, purple);
+}
+
+.main-nav__slogan {
+  width: 100%;
+  margin: 0;
+  color: map-get($colors, white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 1;
+  transition: width .5s, opacity .5s;
+
+  .search-open & {
+    width: 0;
+    opacity: 0;
+    // overflow: hidden;
+    transition: width .5s, opacity .5s .2s;
+  }
+}
+
+.main-nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.main-nav__dropdown {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  // left: 0;
+  z-index: 10;
+  width: 100%;
+  padding-top: 55px;
+  background: map-get($colors, white);
+
+  @include media(lg) {
+    position: static;
+    padding-top: 10px;
+    background: inherit;
+  }
+}

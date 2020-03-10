@@ -1,0 +1,8 @@
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: map-get($font-size, sm);
+  line-height: map-get($font-size, md);
+  color: map-get($colors, black);
+}

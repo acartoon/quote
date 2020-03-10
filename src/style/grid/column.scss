@@ -1,0 +1,31 @@
+$column: 12;
+
+@mixin make-container-column($breakpoint, $value) {
+  @if $breakpoint {
+    @media(min-width: $value) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin make-column($column, $i) {
+  position: relative;
+  flex: 0 0 (100% / $column) * $i;
+  box-sizing: border-box;
+  max-width: (100% / $column) * $i;
+  padding-right: $gutter;
+  padding-left: $gutter;
+}
+
+@each $key, $value in $grid-breakpoints {
+  @for $i from 1 through $column {
+    $breakpoint: if($value != 0, -#{$key}, null);
+    .col#{$breakpoint}-#{$i} {
+      @include make-container-column($breakpoint, $value) {
+        @include make-column($column, $i);
+      }
+    }
+  }
+}

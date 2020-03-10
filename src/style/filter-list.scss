@@ -1,0 +1,29 @@
+$padding: 10px;
+
+.filter-list {
+  @include no-list();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: -$padding;
+  margin-bottom: map-get($indent, s) * -1;
+  margin-left: -$padding;
+
+}
+
+.filter-list__link {
+  display: block;
+  padding-top: 2px;
+  padding-right: $padding;
+  padding-bottom: 3px;
+  padding-left: $padding;
+  border: 1px solid map-get($colors, grey);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.filter-list__item {
+  margin-bottom: map-get($indent, s);
+  padding: 0 $padding;
+}

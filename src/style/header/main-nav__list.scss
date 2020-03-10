@@ -1,0 +1,30 @@
+$padding: 10px;
+
+.main-nav__list {
+  @include no-list();
+
+  @include media(lg) {
+    display: flex;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  font-size: map-get($font-size, md);
+  
+  @include media(lg) {
+    display: flex;
+    padding-right: $padding;
+    padding-left: $padding;
+  }
+}
+
+.main-nav__list {
+  @include media(lg) {
+    margin-right: -$padding;
+    margin-left: -$padding;
+  }
+}
